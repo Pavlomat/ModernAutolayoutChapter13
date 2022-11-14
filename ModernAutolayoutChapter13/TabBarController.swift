@@ -27,7 +27,7 @@ class TabBarController: UITabBarController {
     
     func setupVCs() {
         viewControllers = [
-            createNavController(for: FirstViewController(), title: NSLocalizedString("First", comment: ""), image: UIImage(systemName: "1.circle")!),
+            createNavController(for: BookTableViewController(), title: NSLocalizedString("First", comment: ""), image: UIImage(systemName: "1.circle")!),
 //            createNavController(for: SecondVC11(), title: NSLocalizedString("Second", comment: ""), image: UIImage(systemName: "2.circle")!),
 //            createNavController(for: ThirdVC8(), title: NSLocalizedString("Third", comment: ""), image: UIImage(systemName: "3.circle")!)
         ]

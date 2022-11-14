@@ -17,7 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         window?.backgroundColor = .white
-        window?.rootViewController = TabBarController()
+        let bookTableViewController = BookTableViewController(style: .plain)
+        let navigationController = UINavigationController(rootViewController: bookTableViewController)
+        
+        let url = Bundle.main.url(forResource: "Huckleberry", withExtension: "plist")
+        bookTableViewController.bookUrl = url
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LineCell: UITableViewCell {
+final class LineCell: UITableViewCell, ReusableIdentifier {
     let lineLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .caption2)
