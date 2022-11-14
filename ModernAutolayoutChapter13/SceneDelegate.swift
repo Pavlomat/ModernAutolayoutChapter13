@@ -19,10 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.backgroundColor = .white
         
         let bookViewController = BookViewController()
-        let navigationController = UINavigationController(rootViewController: bookViewController)
+//        let navigationController = UINavigationController(rootViewController: bookViewController)
         let url = Bundle.main.url(forResource: "Huckleberry", withExtension: "json")
         bookViewController.bookUrl = url
-        window?.rootViewController = navigationController
+        let home = TabBarController()
+        window?.rootViewController = home
         window?.makeKeyAndVisible()
     }
 }
