@@ -58,6 +58,7 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let data = try Data(contentsOf: url)
                 let jsonData = try JSONDecoder().decode(Book.self, from: data)
                 books = jsonData.text
+                title = jsonData.title
                 tableView.reloadData()
             } catch {
                 print("error:\(error)")
