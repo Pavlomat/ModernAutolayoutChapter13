@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BAC051B229222E540052BB95 /* Huckleberry.json in Resources */ = {isa = PBXBuildFile; fileRef = BAC051B129222E540052BB95 /* Huckleberry.json */; };
+		BAC051B729226AAB0052BB95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC051B629226AAB0052BB95 /* ChatViewController.swift */; };
+		BAC051B929226AC10052BB95 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC051B829226AC10052BB95 /* ChatCell.swift */; };
+		BAC051BB29226ACB0052BB95 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC051BA29226ACB0052BB95 /* ChatModel.swift */; };
 		BAD31908291FD89F00F068C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD31907291FD89F00F068C9 /* AppDelegate.swift */; };
 		BAD3190A291FD89F00F068C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD31909291FD89F00F068C9 /* SceneDelegate.swift */; };
 		BAD31911291FD8A000F068C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD31910291FD8A000F068C9 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		BAC051B129222E540052BB95 /* Huckleberry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Huckleberry.json; sourceTree = "<group>"; };
+		BAC051B629226AAB0052BB95 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BAC051B829226AC10052BB95 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		BAC051BA29226ACB0052BB95 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		BAD31904291FD89F00F068C9 /* ModernAutolayoutChapter13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernAutolayoutChapter13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD31907291FD89F00F068C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD31909291FD89F00F068C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAC051B529226A790052BB95 /* BookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAD3192C291FE03300F068C9 /* BookViewController.swift */,
+				BAD31925291FDC0100F068C9 /* LineCell.swift */,
+				BAD3192A291FDFD100F068C9 /* BookModel.swift */,
+			);
+			path = BookViewController;
+			sourceTree = "<group>";
+		};
+		BAC051BC29226AD00052BB95 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAC051B629226AAB0052BB95 /* ChatViewController.swift */,
+				BAC051B829226AC10052BB95 /* ChatCell.swift */,
+				BAC051BA29226ACB0052BB95 /* ChatModel.swift */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
 		BAD318FB291FD89F00F068C9 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +91,8 @@
 				BAD31907291FD89F00F068C9 /* AppDelegate.swift */,
 				BAD31909291FD89F00F068C9 /* SceneDelegate.swift */,
 				BAD3191B291FD91B00F068C9 /* TabBarController.swift */,
-				BAD3192C291FE03300F068C9 /* BookViewController.swift */,
-				BAD31925291FDC0100F068C9 /* LineCell.swift */,
-				BAD3192A291FDFD100F068C9 /* BookModel.swift */,
+				BAC051BC29226AD00052BB95 /* ChatViewController */,
+				BAC051B529226A790052BB95 /* BookViewController */,
 				BAD31910291FD8A000F068C9 /* Assets.xcassets */,
 				BAD31912291FD8A000F068C9 /* LaunchScreen.storyboard */,
 				BAD31915291FD8A000F068C9 /* Info.plist */,
@@ -148,11 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD3192B291FDFD100F068C9 /* BookModel.swift in Sources */,
+				BAC051B929226AC10052BB95 /* ChatCell.swift in Sources */,
 				BAD3191C291FD91B00F068C9 /* TabBarController.swift in Sources */,
 				BAD3192D291FE03300F068C9 /* BookViewController.swift in Sources */,
+				BAC051B729226AAB0052BB95 /* ChatViewController.swift in Sources */,
 				BAD31908291FD89F00F068C9 /* AppDelegate.swift in Sources */,
 				BAD3190A291FD89F00F068C9 /* SceneDelegate.swift in Sources */,
 				BAD31926291FDC0100F068C9 /* LineCell.swift in Sources */,
+				BAC051BB29226ACB0052BB95 /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
