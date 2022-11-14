@@ -45,7 +45,7 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lineCell", for: indexPath) as? LineCell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lineCell", for: indexPath) as? LineCell else { return }
         let book = books[indexPath.row]
         cell.lineLabel.text = NumberFormatter.localizedString(from: NSNumber(value: indexPath.row + 1), number: .decimal)
         cell.textView.text = book
@@ -55,9 +55,7 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadJson() {
         if let url = bookUrl {
             do {
-                print("1")
                 let data = try Data(contentsOf: url)
-                print("2")
                 let jsonData = try JSONDecoder().decode(Book.self, from: data)
                 books = jsonData.text
                 tableView.reloadData()
