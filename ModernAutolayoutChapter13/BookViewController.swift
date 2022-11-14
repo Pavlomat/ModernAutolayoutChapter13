@@ -9,7 +9,7 @@ import UIKit
 
 class BookViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var books = [Book]()
+    var books = [String]()
     var bookUrl: URL?
     
     let tableView: UITableView = {
@@ -48,18 +48,18 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "lineCell", for: indexPath) as? LineCell else { fatalError() }
         let book = books[indexPath.row]
         cell.lineLabel.text = NumberFormatter.localizedString(from: NSNumber(value: indexPath.row + 1), number: .decimal)
-        cell.textView.text = book.text[indexPath.row]
+        cell.textView.text = book
         return cell
     }
     
     func loadJson() {
         if let url = bookUrl {
             do {
-                let plistdata = try Data(contentsOf: url)
-                let dictionary = try PropertyListSerialization.propertyList(from: plistdata, options: [], format: nil) as! [String:Any]
-                let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-                let data = try JSONDecoder().decode([Book].self, from: jsonData)
-                books = data
+                print("1")
+                let data = try Data(contentsOf: url)
+                print("2")
+                let jsonData = try JSONDecoder().decode(Book.self, from: data)
+                books = jsonData.text
                 tableView.reloadData()
             } catch {
                 print("error:\(error)")
