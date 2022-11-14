@@ -46,7 +46,7 @@ final class LineCell: UITableViewCell {
     private func setupView() {
         contentView.addSubview(stackView)
 
-        let margins = contentView.layoutMarginsGuide
+        let margins = contentView.readableContentGuide  //readabaleContentGuide чтобы на ipad текст был уже для удобства чтения
         NSLayoutConstraint.activate([
             margins.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             margins.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),

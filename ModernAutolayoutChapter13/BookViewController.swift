@@ -23,7 +23,7 @@ class BookViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(LineCell.self, forCellReuseIdentifier: "lineCell")
-        
+//        tableView.cellLayoutMarginsFollowReadableWidth = true
 //        tableView.delegate = self
 //        tableView.dataSource = self
         
